@@ -2,7 +2,7 @@
 #define AREA_H
 
 
-float areaTriangulo(float base, float altura);
+float areaTriangulo(float lado);
 
 float areaRetangulo(float base, float altura);
 
