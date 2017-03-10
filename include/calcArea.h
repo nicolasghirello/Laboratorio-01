@@ -1,20 +1,20 @@
 #ifndef CALCAREA_H
 #define CALCAREA_H
 
-void dadosArTriangulo();
+float dadosArTriangulo();
 
-void dadosArRetangulo();
+float dadosArRetangulo();
 
-void dadosArQuadrado();
+float dadosArQuadrado();
 
-void dadosArCirculo();
+float dadosArCirculo();
 
-void dadosArPiramide();
+float dadosArPiramide();
 
-void dadosArCubo();
+float dadosArCubo();
 
-void dadosArParalelepipedo();
+float dadosArParalelepipedo();
 
-void dadosArEsfera();
+float dadosArEsfera();
 
 #endif

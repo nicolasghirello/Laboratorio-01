@@ -1,62 +1,42 @@
+/**
+ * @file 		main.cpp
+ * @brief		Programa que calcula a área e perímetro para figuras geométricas planas e a área e volume para figuras geométricas espaciais.
+ * @author		Nicolas Ghirello e Rodolpho Erick.
+ * @since		09/03/2017
+ * @data		10/03/2017
+ */
+
 #include <iostream>
+#include "menu.h"
 
-using std::cout;
 using std::cin;
-using std::endl;
+using std::cout;
+using std::endl; 
 
+/**
+ * @brief		Função principal.
+ * @details		A função principal apresenta o menu ao usuário que encaminhará para uma outra função onde haverá outras chamadas para cálculo de área, 
+ *				perímetro ou volume.
+ */ 
 int main(){
 	int opcao;
-	while(1){
+	
+	//Figuras planas (área + perimetro)
+	cout << "\n(1) Triangulo equilatero" << endl;
+	cout << "(2) Retangulo" << endl;
+	cout << "(3) Quadrado" << endl;
+	cout << "(4) Circulo" << endl;
+	//Figuras geométricas (área + volume)
+	cout << "(5) Piramide com base quadrangular" << endl;
+	cout << "(6) Cubo" << endl;
+	cout << "(7) Paralelepipedo" << endl;
+	cout << "(8) Esfera" << endl;
+	cout << "(0) Sair" << endl;
+	cout << "\nDigite sua opcao: ";
 
-		//Figuras planas (área + perimetro)
-		cout << "(1) Triangulo equilatero" << endl;
-		cout << "(2) Retangulo" << endl;
-		cout << "(3) Quadrado" << endl;
-		cout << "(4) Circulo" << endl;
-		//Figuras geométricas (área + volume)
-		cout << "(5) Piramide com base quadrangular" << endl;
-		cout << "(6) Cubo" << endl;
-		cout << "(7) Paralelepipedo" << endl;
-		cout << "(8) Esfera" << endl;
+	cin >> opcao;
 
-		cout << "(0) Sair" << endl;
-		cout << "Digite sua opcao: " << endl;
+	menu(opcao);	
 
-		cin >> opcao;
-		switch(opcao){
-			case 1:
-				cout << "opcao 1" << endl;
-				break;
-			case 2:
-				cout << "opcao 2" << endl;		
-				break;
-			case 3:
-				cout << "opcao 3" << endl;		
-				break;
-			case 4:
-				cout << "opcao 4" << endl;		
-				break;
-			case 5:
-				cout << "opcao 5" << endl;		
-				break;
-			case 6:
-				cout << "opcao 6" << endl;		
-				break;
-			case 7:
-				cout << "opcao 7" << endl;		
-				break;
-			case 8:
-				cout << "opcao 8" << endl;		
-				break;
-			case 9:
-				cout << "opcao 9" << endl;		
-				break;
-			case 0:
-				cout << "Encerrando..." << endl;		
-				break;
-			default:
-				cout << "Digite uma opção válida" << endl;
-				main();
-		}
-	}
+	return 0;
 }

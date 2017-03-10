@@ -1,12 +1,12 @@
 #ifndef CALCVOLUME_H
 #define CALCVOLUME_H
 
-void dadosVolPiramide();
+float dadosVolPiramide();
 
-void dadosVolCubo();
+float dadosVolCubo();
 
-void dadosVolParalelepipedo();
+float dadosVolParalelepipedo();
 
-void dadosVolEsfera();
+float dadosVolEsfera();
 
 #endif

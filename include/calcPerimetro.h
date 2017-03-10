@@ -1,12 +1,12 @@
 #ifndef CALCPERIMETRO_H
 #define CALCPERIMETRO_H
 
-void dadosPerTriangulo();
+float dadosPerTriangulo();
 
-void dadosPerRetangulo();
+float dadosPerRetangulo();
 
-void dadosPerQuadrado();
+float dadosPerQuadrado();
 
-void dadosPerCirculo();
+float dadosPerCirculo();
 
 #endif
