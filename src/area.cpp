@@ -1,3 +1,4 @@
+
 /**
  * @file 	area.cpp
  * @brief 	Funções para cálculo de área das figuras planas e espaciais.
@@ -81,7 +82,7 @@ float areaCubo(float aresta) {
  * @param[in]	aresta3 Terceiro valor das três arestas do paralelepípedo.
  * @return 		Área do paralelepípedo.
  */
-float areaParalelepipedo(float aresta1, float aresta2, float aresta3) {
+float areaParalelepipedo(float &aresta1, float &aresta2, float &aresta3) {
 	return ((2 * aresta1 * aresta2) + (2 * aresta1 * aresta3) + (2 * aresta2 * aresta3));
 }
 
