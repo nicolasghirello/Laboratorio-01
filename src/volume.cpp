@@ -21,7 +21,7 @@ using namespace std;
  * @return 		Volume da pirâmide.
  */
 float volumePiramide(float ladoQuadrado, float alturaTriangulo){
-	return((1/3) * pow(ladoQuadrado, 2) * alturaTriangulo);
+	return ((1/3) * pow(ladoQuadrado, 2) * alturaTriangulo);
 }
 
 /**
@@ -30,7 +30,7 @@ float volumePiramide(float ladoQuadrado, float alturaTriangulo){
  * @return 		Volume do Cubo.
  */
 float volumeCubo(float arestaCubo){
-	return(pow(arestaCubo,3));
+	return (pow(arestaCubo,3));
 }
 
 /**
@@ -41,7 +41,7 @@ float volumeCubo(float arestaCubo){
  * @return 		Volume do paralelepipedo.
  */
 float volumeParalelepipedo(float &aresta1, float &aresta2, float &aresta3){
-	return(aresta1 * aresta2 * aresta3);
+	return (aresta1 * aresta2 * aresta3);
 }
 
 /**
@@ -50,5 +50,5 @@ float volumeParalelepipedo(float &aresta1, float &aresta2, float &aresta3){
  * @return 		Volume da esfera.
  */
 float volumeEsfera(float raioEsfera){
-	return((4/3) * PI * pow(raioEsfera,3));
+	return ((4/3) * PI * pow(raioEsfera,3));
 }
