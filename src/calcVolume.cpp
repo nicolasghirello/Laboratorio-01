@@ -3,7 +3,7 @@
  * @brief 	Funções para solicitação das medidas das figuras geométricas espaciais ao usuário.
  * @author 	Nicolas Ghirello
  * @since 	09/03/2017
- * @data 	09/03/2017
+ * @data 	10/03/2017
  */
 
 #include <iostream>

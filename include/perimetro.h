@@ -1,7 +1,7 @@
 #ifndef PERIMETRO_H
 #define PERIMETRO_H
 
-float perimetroTriangulo(float &lado1, float &lado2, float &lado3);
+float perimetroTriangulo(float lado);
 
 float perimetroRetangulo(float baseRetangulo, float alturaRetangulo);
 

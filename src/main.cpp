@@ -53,7 +53,7 @@ int main(){
 				break;
 			case 0:
 				cout << "Encerrando..." << endl;		
-				return 0;
+				break;
 			default:
 				cout << "Digite uma opção válida" << endl;
 				main();

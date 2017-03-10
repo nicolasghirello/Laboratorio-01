@@ -1,10 +1,9 @@
-
 /**
  * @file 	area.cpp
  * @brief 	Funções para cálculo de área das figuras planas e espaciais.
  * @author 	Rodolpho Erick
  * @since 	09/03/2017
- * @data 	09/03/2017
+ * @data 	10/03/2017
  */
 
 #include <iostream>
@@ -21,8 +20,8 @@ using namespace std;
  * @param[in] 	altura Valor da altura do triângulo.
  * @return 		Área do triângulo.
  */
-float areaTriangulo(float base, float altura) {
-	return (base * altura) / 2;
+float areaTriangulo(float lado) {
+	return (lado * lado) / 2;
 }
 
 /**
@@ -61,7 +60,7 @@ float areaCirculo(float raio) {
  */
 float areaPiramide(float lado, float altura) {
 	float areaBase = areaQuadrado(lado);
-	float areaLateral = 4 * areaTriangulo(lado, altura);
+	float areaLateral = 4 * areaTriangulo(lado);
 
 	return areaBase + areaLateral;
 }

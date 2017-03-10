@@ -3,25 +3,24 @@
  * @brief 	Funções para solicitação das medidas das figuras geométricas ao usuário, tanto as planas quanto as espaciais.
  * @author 	Nicolas Ghirello
  * @since 	09/03/2017
- * @data 	09/03/2017
+ * @data 	10/03/2017
  */
 
 #include <iostream>
 #include <cmath>
 #include "perimetro.h"
 
+#define PI 3.1415
+
 using namespace std;
 
 /**
- * @brief		Função que calcula o perimetro do triângulo.
- * @param[in] 	lado1 Primeiro valor dos três lados do triângulo. 
- * @param[in]	lado2 Segundo valor dos três lados do triângulo.
- * @param[in]	lado3 Terceiro valor dos três lados do triângulo.
+ * @brief		Função que calcula o perimetro do triângulo equilátero.
+ * @param[in] 	lado Valor dos três lados do triângulo equi~´atero.
  * @return 		Perimetro do triângulo.
  */
-
-float perimetroTriangulo(float &lado1, float &lado2, float &lado3){
-	return(lado1 + lado2 + lado3);
+float perimetroTriangulo(float lado){
+	return (lado + lado + lado);
 }
 
 /**
@@ -30,9 +29,8 @@ float perimetroTriangulo(float &lado1, float &lado2, float &lado3){
  * @param[in] 	alturaRetangulo Valor da aresta do retângulo.
  * @return 		Perimetro do retângulo.
  */
-
 float perimetroRetangulo(float baseRetangulo, float alturaRetangulo){
-	return(2 * (baseRetangulo + alturaRetangulo));
+	return (2 * (baseRetangulo + alturaRetangulo));
 }
 
 /**
@@ -40,9 +38,8 @@ float perimetroRetangulo(float baseRetangulo, float alturaRetangulo){
  * @param[in]	ladoQuadrado Valor do lado do quadrado.
  * @return 		Perimetro do quadrado.
  */
-
 float perimetroQuadrado(float ladoQuadrado){
-	return(4 * ladoQuadrado);
+	return (4 * ladoQuadrado);
 }
 
 /**
@@ -50,7 +47,6 @@ float perimetroQuadrado(float ladoQuadrado){
  * @param[in] 	raioCirculo Valor do raio do círculo.
  * @return 		Perimetro do círculo.
  */
-
 float perimetroCirculo(float raioCirculo){
-	return(2 * M_PI * raioCirculo);
+	return (2 * PI * raioCirculo);
 }

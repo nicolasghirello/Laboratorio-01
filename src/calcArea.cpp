@@ -1,10 +1,9 @@
-
 /**
  * @file 	calcArea.cpp
  * @brief 	Funções para solicitação das medidas das figuras geométricas ao usuário, tanto as planas quanto as espaciais.
  * @author 	Rodolpho Erick
  * @since 	09/03/2017
- * @data 	09/03/2017
+ * @data 	10/03/2017
  */
 
 #include <iostream>
@@ -20,13 +19,11 @@ using namespace std;
  *				para posterior cálculo de sua área na função areaTriangulo.
  */
 void dadosArTriangulo() {
-	float baseTriangulo, alturaTriangulo;
-	cout << "Digite a medida da base do triângulo, em metros: ";
-	cin >> baseTriangulo;
-	cout << "Digite a medida da altura do triângulo, em metros: ";
-	cin >> alturaTriangulo;
+	float ladoTriangulo;
+	cout << "Digite a medida do lado do triângulo, em metros: ";
+	cin >> ladoTriangulo;	
 
-	areaTriangulo(baseTriangulo, alturaTriangulo);
+	areaTriangulo(ladoTriangulo);
 }
 
 /**

@@ -3,32 +3,28 @@
   * @brief 	Funções para solicitação das medidas das figuras geométricas planas ao usuário.
  * @author 	Nicolas Ghirello
  * @since 	09/03/2017
- * @data 	09/03/2017
+ * @data 	10/03/2017
  */
 
 #include <iostream>
 #include <cmath>
 #include "calcPerimetro.h"
-#include "perimeto.h"
+#include "perimetro.h"
 
 using namespace std;
 
 /**
- * @brief		Função para solicitar ao usuário as medidas dos lados do triângulo.
- * @details		A função dadosPerTriangulo solicita ao usuário as informações quanto as medidas dos lados do triângulo
+ * @brief		Função para solicitar ao usuário a medida do lado de um triângulo equilátero.
+ * @details		A função dadosPerTriangulo solicita ao usuário as informações quanto a medida do lado de um triângulo equilátero
  *				para posterior cálculo de seu perimetro na função perimetroTriangulo.
  */
 void dadosPerTriangulo() {
 
-	float *lados = new float[3];
-	for (int i = 0; i < 3; i++) {
-		cout << "Digite a medida do lado " << i + 1 << " do triângulo, em metros: ";
-		cin >> lados[i];
-	}
+	float lado;	
+	cout << "Digite a medida do lado do triângulo, em metros: ";
+	cin >> lado;	
 
-	perimetroTriangulo(lados[0], lados[1], lados[2]);
-
-	delete [] lados;
+	perimetroTriangulo(lado);	
 }
 
 /**
