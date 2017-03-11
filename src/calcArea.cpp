@@ -3,11 +3,10 @@
  * @brief 	Funções para solicitação das medidas das figuras geométricas ao usuário, tanto as planas quanto as espaciais.
  * @author 	Rodolpho Erick
  * @since 	09/03/2017
- * @data 	10/03/2017
+ * @data 	11/03/2017
  */
 
 #include <iostream>
-#include <cmath>
 #include "calcArea.h"
 #include "area.h"
 
@@ -16,105 +15,98 @@ using namespace std;
 /**
  * @brief		Função para solicitar ao usuário as medidas do triângulo.
  * @details		A função dadosArTriangulo solicita ao usuário as informações quanto as medidas da base e da altura do triângulo
- *				para posterior cálculo de sua área na função areaTriangulo.
- * @return 		Área do triângulo.
+ *				para posterior cálculo de sua área na função areaTriangulo. 
  */
-float dadosArTriangulo() {
+void dadosArTriangulo() {
 	float ladoTriangulo;
 	cout << "Digite a medida do lado do triangulo, em metros: ";
 	cin >> ladoTriangulo;
 
-	return areaTriangulo(ladoTriangulo);
+	areaTriangulo(ladoTriangulo);
 }
 
 /**
  * @brief		Função para solicitar ao usuário as medidas do retângulo.
  * @details		A função dadosArRetangulo solicita ao usuário as informações quanto as medidas da base e da altura do retângulo
- *				para posterior cálculo de sua área na função areaRetangulo.
- * @return 		Área do retângulo.
+ *				para posterior cálculo de sua área na função areaRetangulo. 
  */
-float dadosArRetangulo() {
+void dadosArRetangulo() {
 	float baseRetangulo, alturaRetangulo;
 	cout << "Digite a medida da base do retangulo, em metros: ";
 	cin >> baseRetangulo;
 	cout << "Digite a medida da altura do retangulo, em metros: ";
 	cin >> alturaRetangulo;
 
-	return areaRetangulo(baseRetangulo, alturaRetangulo);
+	areaRetangulo(baseRetangulo, alturaRetangulo);
 }
 
 /**
  * @brief		Função para solicitar ao usuário a medida do quadrado.	
  * @details		A função dadosArQuadrado solicita ao usuário as informações quanto a medida do lado do quadrado para posterior
  *				cálculo da área na função areaQuadrado. 
- * @return 		Área do Quadrado
  */
-float dadosArQuadrado() {
+void dadosArQuadrado() {
 	float ladoQuadrado;
 	cout << "Digite a medida do lado do quadrado, em metros: ";
 	cin >> ladoQuadrado;
 
-	return areaQuadrado(ladoQuadrado);
+	areaQuadrado(ladoQuadrado);
 }
 
 /**
  * @brief		Função para soliciar ao usuário a medida do circulo.
  * @details		A função dadosArCirculo solicita ao usuário a informação quanto a medida do raio do circulo para posterior
- *				cálculo da área na função areaCirculo.
- * @return 		Área do circulo.
+ *				cálculo da área na função areaCirculo. 
  */
-float dadosArCirculo() {
+void dadosArCirculo() {
 	float raioCirculo;
 	cout << "Digite a medida do raio do circulo, em metros: ";
 	cin >> raioCirculo;
 
-	return areaCirculo(raioCirculo);
+	areaCirculo(raioCirculo);
 }
 
 /**
  * @brief		Função para solicitar ao usuário as medidas da pirâmide.
  * @details		A função dadosArPiramide solicita ao usuário as informações quanto as medidas do lado da base da pirâmide, 
  *				que é um quadrado, e da altura da pirâmide, que é a medida de uma das arestas dos triângulo.
- * @return 		Área da pirâmide.
  */
-float dadosArPiramide() {
+void dadosArPiramide() {
 	float ladoQuadrado, alturaTriangulo;
 	cout << "Digite a medida do lado do quadrado que forma a base, em metros: ";
 	cin >> ladoQuadrado;
 	cout << "Digite a medida da altura da piramide, em metros: ";
 	cin >> alturaTriangulo;
 
-	return areaPiramide(ladoQuadrado, alturaTriangulo);
+	areaPiramide(ladoQuadrado, alturaTriangulo);
 }
 
 /**
  * @brief		Função para solicitar ao usuário a medida do cubo.
  * @details		A função dadosArCubo solicita ao usuário a informação quanto a medida da aresta do cubo, para posterior 
  *				calculo da área pela função areaCubo.
- * @return 		Área do cubo.
  */
-float dadosArCubo() {
+void dadosArCubo() {
 	float arestaCubo;
 	cout << "Digite a medida da aresta do cubo, em metros: ";
 	cin >> arestaCubo;
 
-	return areaCubo(arestaCubo);
+	areaCubo(arestaCubo);
 }
 
 /**
  * @brief		Função para solicitar ao usuário as medidas do paralelepípedo.
  * @details		A função dadosArParalelepipedo solicita ao usuário as informações quanto as medidas das três arestas
  *				de um paralelepípedo para posterior cálculo da área pela função areaParalelepipedo.	
- * @return 		Área do paralelepípedo.
  */
-float dadosArParalelepipedo() {
+void dadosArParalelepipedo() {
 	float *arestas = new float[3];
 	for (int i = 0; i < 3; i++) {
 		cout << "Digite a medida da aresta " << i + 1 << " do paralelepipedo, em metros: ";
 		cin >> arestas[i];
 	}
 
-	return areaParalelepipedo(arestas[0], arestas[1], arestas[2]);
+	areaParalelepipedo(arestas[0], arestas[1], arestas[2]);
 
 	delete [] arestas;
 }
@@ -123,12 +115,11 @@ float dadosArParalelepipedo() {
  * @brief		Função para solicitar ao usuário a medida da esfera.
  * @details		A função dadosArEsfera solicita ao usuário a informação quanto a medida do raio da esfera para posterior
  *				calculo da área pela função areaEsfera.
- * @return 		Área da esfera.
  */
-float dadosArEsfera() {
+void dadosArEsfera() {
 	float raioEsfera;
 	cout << "Digite a medida do raio da esfera, em metros: ";
 	cin >> raioEsfera;
 
-	return areaEsfera(raioEsfera);	
+	areaEsfera(raioEsfera);	
 }

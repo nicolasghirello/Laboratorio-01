@@ -2,21 +2,21 @@
 #define AREA_H
 
 
-float areaTriangulo(float lado);
+void areaTriangulo(float lado);
 
-float areaRetangulo(float base, float altura);
+void areaRetangulo(float base, float altura);
 
-float areaQuadrado(float lado);
+void areaQuadrado(float lado);
 
-float areaCirculo(float raio);
+void areaCirculo(float raio);
 
-float areaPiramide(float lado, float altura);
+void areaPiramide(float lado, float altura);
 
-float areaCubo(float aresta);
+void areaCubo(float aresta);
 
-float areaParalelepipedo(float &aresta1, float &aresta2, float &aresta3);
+void areaParalelepipedo(float &aresta1, float &aresta2, float &aresta3);
 
-float areaEsfera(float raio);
+void areaEsfera(float raio);
 
 
 #endif

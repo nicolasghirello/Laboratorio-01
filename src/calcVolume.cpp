@@ -3,74 +3,49 @@
  * @brief 	Funções para solicitação das medidas das figuras geométricas espaciais ao usuário.
  * @author 	Nicolas Ghirello
  * @since 	09/03/2017
- * @data 	10/03/2017
+ * @data 	11/03/2017
  */
 
-#include <iostream>
-#include <cmath>
 #include "calcVolume.h"
 #include "volume.h"
 
-using namespace std;
 
 /**
- * @brief		Função para solicitar ao usuário as medidas da pirâmide.
- * @details		A função dadosVolPiramide solicita ao usuário as informações quanto a medida do lado da base da pirâmide, 
- *				que é um quadrado, e da altura da pirâmide, que é a medida de uma das arestas dos triângulo.
- * @return 		Volume da pirâmide.
+ * @brief		Função de redirecionamento para a função volumePiramide.
+ * @details		A função dadosVolPiramide apenas encaminha para a função volumePiramide. 
+ * @param[in] 	ladoQuadrado Valor da aresta da base da pirâmide, que forma um quadrado. 
+ * @param[in] 	alturaTriangulo Valor das alturas dos triângulos da pirâmide.
  */
-float dadosVolPiramide() {
-	float ladoQuadrado, alturaTriangulo;
-	cout << "Digite a medida do lado do quadrado que forma a base, em metros: ";
-	cin >> ladoQuadrado;
-	cout << "Digite a medida da altura da piramide, em metros: ";
-	cin >> alturaTriangulo;
-
-	return volumePiramide(ladoQuadrado, alturaTriangulo);
+void dadosVolPiramide(float ladoQuadrado, float alturaTriangulo) {
+	volumePiramide(ladoQuadrado, alturaTriangulo);
 }
 
 /**
- * @brief		Função para solicitar ao usuário a medida da aresta do cubo.
- * @details		A função dadosVolCubo solicita ao usuário a informação quanto a medida da aresta do cubo, para posterior 
- *				calculo do volume pela função volumeCubo.
- * @return 		Volume do cubo.
+ * @brief		Função de redirecionamento para a função volumeCubo.
+ * @details		A função dadosVolCubo apenas encaminha para a função volumeCubo. 
+ * @param[in] 	arestaCubo Valor da aresta do cubo. 
  */
-float dadosVolCubo() {
-	float arestaCubo;
-	cout << "Digite a medida da aresta do cubo, em metros: ";
-	cin >> arestaCubo;
-
-	return volumeCubo(arestaCubo);
+void dadosVolCubo(float arestaCubo) {
+	volumeCubo(arestaCubo);
 }
 
 /**
- * @brief		Função para solicitar ao usuário as medidas do paralelepípedo.
- * @details		A função dadosVolParalelepipedo solicita ao usuário as informações quanto as medidas das três arestas
- *				de um paralelepípedo para posterior cálculo do volume pela função volumeParalelepipedo.	
- * @return 		Volume do paralelepípedo.
+ * @brief		Função de redirecionamento para a função volumeParalelepipedo.
+ * @details		A função dadosVolParalelepipedo apenas encaminha para a função volumeParalelepipedo. 
+ * @param[in] 	aresta1 Primeiro valor das três arestas do paralelepípedo. 
+ * @param[in]	aresta2 Segundo valor das três arestas do paralelepípedo.
+ * @param[in]	aresta3 Terceiro valor das três arestas do paralelepípedo. 
  */
-float dadosVolParalelepipedo() {
-	float *arestas = new float[3];
-	for (int i = 0; i < 3; i++) {
-		cout << "Digite a medida da aresta " << i + 1 << " do paralelepipedo, em metros: ";
-		cin >> arestas[i];
-	}
-
-	return volumeParalelepipedo(arestas[0], arestas[1], arestas[2]);
-
-	delete [] arestas;
+void dadosVolParalelepipedo(float &aresta1, float &aresta2, float &aresta3) {
+	volumeParalelepipedo(aresta1, aresta2, aresta3);
 }
 
 /**
- * @brief		Função para solicitar ao usuário a medida da esfera.
- * @details		A função dadosVolEsfera solicita ao usuário a informação quanto a medida do raio da esfera para posterior
- *				calculo do volume pela função volumeEsfera.
- * @return 		Volume da esfera.
+ * @brief		Função de redirecionamento para a função volumeEsfera.
+ * @details		A função dadosVolEsfera apenas encaminha para a função volumeEsfera.
+ * @param[in] 	raioEsfera Valor do raio de uma esfera.
+ 
  */
-float dadosVolEsfera() {
-	float raioEsfera;
-	cout << "Digite a medida do raio da esfera, em metros: ";
-	cin >> raioEsfera;
-
-	return volumeEsfera(raioEsfera);	
+void dadosVolEsfera(float raioEsfera) {
+	volumeEsfera(raioEsfera);	
 }

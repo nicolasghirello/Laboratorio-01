@@ -1,12 +1,12 @@
 #ifndef CALCVOLUME_H
 #define CALCVOLUME_H
 
-float dadosVolPiramide();
+void dadosVolPiramide(float ladoQuadrado, float alturaTriangulo);
 
-float dadosVolCubo();
+void dadosVolCubo(float arestaCubo);
 
-float dadosVolParalelepipedo();
+void dadosVolParalelepipedo(float &aresta1, float &aresta2, float &aresta3);
 
-float dadosVolEsfera();
+void dadosVolEsfera(float raioEsfera);
 
 #endif

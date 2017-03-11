@@ -3,14 +3,12 @@
  * @brief 	Função para exibir o menu ao usuário e fazêlo escolher entre uma das figuras geométricas.
  * @author 	Rodolpho Erick
  * @since 	10/03/2017
- * @data 	10/03/2017
+ * @data 	11/03/2017
  */
 
 #include <iostream>
 #include "menu.h"
 #include "calcArea.h"
-#include "calcPerimetro.h"
-#include "calcvolume.h"
 
 using namespace std;
 
@@ -20,44 +18,55 @@ using namespace std;
  * @details		A função menu calcula de imediato a área da figura geométrica e encaminha para as demais funções para cálculo 
  *				do perímetro ou do volume.
  */
-void menu(int opcaoEscolhida) {
+void menu() {
+	int opcaoEscolhida;
+
+	//Figuras planas (área + perimetro)
+	cout << "_________________________________" << endl;
+	cout << "\n(1) Triangulo equilatero" << endl;
+	cout << "(2) Retangulo" << endl;
+	cout << "(3) Quadrado" << endl;
+	cout << "(4) Circulo" << endl;
+	//Figuras geométricas (área + volume)
+	cout << "(5) Piramide com base quadrangular" << endl;
+	cout << "(6) Cubo" << endl;
+	cout << "(7) Paralelepipedo" << endl;
+	cout << "(8) Esfera" << endl;
+	cout << "(0) Sair" << endl;
+	cout << "\nDigite sua opcao: ";
+
+	cin >> opcaoEscolhida;
+
 	switch(opcaoEscolhida){
 		case 1:				
-			cout << "\nA area do triangulo e de " << dadosArTriangulo() << "m2." << endl;
-			cout << "O perimetro do triangulo e de " << dadosPerTriangulo() << "m2." << endl;			
+			dadosArTriangulo();						
 			break;
 		case 2:
-			cout << "\nA area do retangulo e de " << dadosArRetangulo() << "m2.\n" << endl;
-			cout << "O perimetro do retangulo e de " << dadosPerRetangulo() << "m2." << endl;			
+			dadosArRetangulo();						
 			break;
 		case 3:
-			cout << "\nA area do quadrado e de " << dadosArQuadrado() << "m2.\n" << endl;
-			cout << "O perimetro do quadrado e de " << dadosPerQuadrado() << "m2." << endl;			
+			dadosArQuadrado();					
 			break;
 		case 4:
-			cout << "\nA area do circulo e de " << dadosArCirculo() << "m2.\n" << endl;
-			cout << "O perimetro do circulo e de " << dadosPerCirculo() << "m2." << endl;		
+			dadosArCirculo();				
 			break;
 		case 5:
-			cout << "\nA area da piramide e de " << dadosArPiramide() << "m2.\n" << endl;
-			cout << "O volume da piramide e de " << dadosVolPiramide() << "m2." << endl;			
+			dadosArPiramide();						
 			break;
 		case 6:
-			cout << "\nA area do cubo e de " << dadosArCubo() << "m2.\n" << endl;
-			cout << "O volume do cubo e de " << dadosVolCubo() << "m2." << endl;			
+			dadosArCubo();						
 			break;
 		case 7:
-			cout << "\nA area do paralelepipedo e de " << dadosArParalelepipedo() << "m2.\n" << endl;
-			cout << "O volume do paralelepipedo e de " << dadosVolParalelepipedo() << "m2." << endl;			
+			dadosArParalelepipedo();						
 			break;
 		case 8:
-			cout << "\nA area da esfera e de " << dadosArEsfera() << "m2.\n" << endl;
-			cout << "O volume da esfera e de " << dadosVolEsfera() << "m2." << endl;	
+			dadosArEsfera();				
 			break;		
-		case 0:						
+		case 0:	
+			cout << "\nPrograma encerrado. Obrigado!" << endl;					
 			break;
 		default:
-			cout << "Digite uma opção válida." << endl;
-			menu(opcaoEscolhida);			
+			cout << "\n:::::: Digite uma opcao valida! ::::::" << endl;
+			menu();		
 	}
 }
