@@ -1,7 +1,7 @@
 #ifndef VOLUME_H
 #define VOLUME_H
 
-void volumePiramide(float ladoQuadrado, float alturaTriangulo);
+void volumePiramide(float areaBase, float alturaTriangulo);
 
 void volumeCubo(float arestaCubo);
 

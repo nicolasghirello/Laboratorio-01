@@ -16,8 +16,8 @@
  * @param[in] 	ladoQuadrado Valor da aresta da base da pirâmide, que forma um quadrado. 
  * @param[in] 	alturaTriangulo Valor das alturas dos triângulos da pirâmide.
  */
-void dadosVolPiramide(float ladoQuadrado, float alturaTriangulo) {
-	volumePiramide(ladoQuadrado, alturaTriangulo);
+void dadosVolPiramide(float areaBase, float alturaTriangulo) {
+	volumePiramide(areaBase, alturaTriangulo);
 }
 
 /**

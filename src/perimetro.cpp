@@ -19,7 +19,8 @@ using namespace std;
  * @param[in] 	lado Valor dos três lados do triângulo equilátero. 
  */
 void perimetroTriangulo(float lado){
-	cout << "O perimetro do triangulo e de " << lado + lado + lado << "m." << endl;
+	cout.precision(2);
+	cout << "O perimetro do triangulo e de " << fixed << lado + lado + lado << "m." << endl;
 	menu();	
 }
 
@@ -29,7 +30,8 @@ void perimetroTriangulo(float lado){
  * @param[in] 	alturaRetangulo Valor da aresta do retângulo.
  */
 void perimetroRetangulo(float baseRetangulo, float alturaRetangulo){
-	cout << "O perimetro do retangulo e de " << 2 * (baseRetangulo + alturaRetangulo) << "m." << endl;
+	cout.precision(2);
+	cout << "O perimetro do retangulo e de " << fixed << 2 * (baseRetangulo + alturaRetangulo) << "m." << endl;
 	menu();
 }
 
@@ -38,7 +40,8 @@ void perimetroRetangulo(float baseRetangulo, float alturaRetangulo){
  * @param[in]	ladoQuadrado Valor do lado do quadrado. 
  */
 void perimetroQuadrado(float ladoQuadrado){
-	cout << "O perimetro do quadrado e de " << (4 * ladoQuadrado) << "m." << endl;
+	cout.precision(2);
+	cout << "O perimetro do quadrado e de " << fixed << (4 * ladoQuadrado) << "m." << endl;
 	menu();
 }
 
@@ -47,6 +50,7 @@ void perimetroQuadrado(float ladoQuadrado){
  * @param[in] 	raioCirculo Valor do raio do círculo. 
  */
 void perimetroCirculo(float raioCirculo){
-	cout << "O perimetro do circulo e de " << (2 * PI * raioCirculo) << "m." << endl;
+	cout.precision(2);
+	cout << "O perimetro do circulo e de " << fixed << (2 * PI * raioCirculo) << "m." << endl;
 	menu();
 }

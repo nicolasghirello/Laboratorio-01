@@ -20,8 +20,9 @@ using namespace std;
  * @param[in] 	ladoQuadrado Valor do lado da base da pirâmide.
  * @param[in] 	alturaTriangulo Valor da altura da pirâmide. 
  */
-void volumePiramide(float ladoQuadrado, float alturaTriangulo){
-	cout << "O volume da piramide e de " << (1/3) * (pow(ladoQuadrado, 2) * alturaTriangulo) << "m3." << endl;
+void volumePiramide(float areaBase, float alturaTriangulo){	
+	cout.precision(2);	
+	cout << "O volume da piramide e de " << fixed << ((areaBase * alturaTriangulo) / 3) << "m3." << endl;
 	menu();	
 }
 
@@ -30,7 +31,8 @@ void volumePiramide(float ladoQuadrado, float alturaTriangulo){
  * @param[in] 	arestaCubo Valor da aresta do Cubo.
  */
 void volumeCubo(float arestaCubo){
-	cout << "O volume do cubo e de " << pow(arestaCubo,3) << "m3." << endl;
+	cout.precision(2);
+	cout << "O volume do cubo e de " << fixed << pow(arestaCubo,3) << "m3." << endl;
 	menu();	
 }
 
@@ -41,7 +43,8 @@ void volumeCubo(float arestaCubo){
  * @param[in]	aresta3 Terceiro valor das três arestas do paralelepípedo.
  */
 void volumeParalelepipedo(float &aresta1, float &aresta2, float &aresta3){
-	cout << "O volume do paralelepipedo e de " << aresta1 * aresta2 * aresta3 << "m3." << endl;
+	cout.precision(2);
+	cout << "O volume do paralelepipedo e de " << fixed << aresta1 * aresta2 * aresta3 << "m3." << endl;
 	menu();	
 }
 
@@ -50,6 +53,7 @@ void volumeParalelepipedo(float &aresta1, float &aresta2, float &aresta3){
  * @param[in] 	raioEsfera Valor do raio da esfera.
  */
 void volumeEsfera(float raioEsfera){
-	cout << "O volume da esfera e de " << (4/3) * (PI * pow(raioEsfera,3)) << "m3." << endl;
+	cout.precision(2);	
+	cout << "O volume da esfera e de " << fixed << ((4 * PI * pow(raioEsfera, 3)) / 3) << "m3." << endl;
 	menu();		
 }

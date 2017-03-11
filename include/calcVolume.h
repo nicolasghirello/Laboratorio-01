@@ -1,7 +1,7 @@
 #ifndef CALCVOLUME_H
 #define CALCVOLUME_H
 
-void dadosVolPiramide(float ladoQuadrado, float alturaTriangulo);
+void dadosVolPiramide(float areaBase, float alturaTriangulo);
 
 void dadosVolCubo(float arestaCubo);
 
